@@ -14,7 +14,12 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 3001
 
-app.use(cors({ origin: /^http:\/\/localhost:\d+$/, })) 
+app.use(cors({
+  origin: [
+    /^http:\/\/localhost:\d+$/,
+    'https://news-website-blqw-m2msbttzi-isha-singhal7s-projects.vercel.app'
+  ]
+}))
 app.use(express.json())
 
 app.get('/api/health', (_req, res) => {
