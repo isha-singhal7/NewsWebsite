@@ -14,8 +14,7 @@ const app = express()
 app.use(cors({
   origin: [
     /^http:\/\/localhost:\d+$/,
-    'https://news-website-blqw.vercel.app',
-    'https://news-website-blqw-m2msbttzi-isha-singhal7s-projects.vercel.app'
+    /^https:\/\/news-website-blqw.*\.vercel\.app$/
   ]
 }))
 
